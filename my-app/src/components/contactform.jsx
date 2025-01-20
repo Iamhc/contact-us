@@ -19,8 +19,8 @@ const ContactForm = () => {
 
     try {
       const response = await fetch(
-        //   "https://backend-contact-2.onrender.com/",
-        "http://localhost:5000/api/contact",
+           "https://backend-contact-2.onrender.com/",
+        //"http://localhost:5000/api/contact",
         //https://backend-contact-i4wq.onrender.com/api/contact
         {
           method: "POST",
