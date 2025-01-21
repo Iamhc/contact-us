@@ -67,9 +67,7 @@ const ContactForm = () => {
         className="w-full lg:w-[30%] bg-black p-8 rounded-lg shadow-lg"
         onSubmit={handleSubmit}
       >
-        {/* First Header */}
         <h2 className="text-4xl text-yellow-400 mb-6">GET IN TOUCH</h2>
-        {/* Other Headers with Gray Text */}
         <p className="text-lg text-gray-500 mb-4">Have some questions?</p>
         <p className="text-lg text-gray-500 mb-6">
           Feel free to ask them anytime
@@ -99,4 +97,48 @@ const ContactForm = () => {
             placeholder="Name"
           />
         </div>
-        <div classNa
+        <div className="mb-4">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-transparent text-white py-2"
+            placeholder="Email"
+          />
+        </div>
+        <div className="mb-4">
+          <input
+            type="tel"
+            name="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-transparent text-white py-2"
+            placeholder="Phone"
+          />
+        </div>
+        <div className="mb-6">
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            name="message"
+            rows="3"
+            className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-transparent text-white py-2"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <div className="text-left">
+          <button
+            type="submit"
+            className="bg-black text-yellow-400 py-2 px-4 rounded-lg hover:text-yellow-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default ContactForm;
+
