@@ -1,28 +1,26 @@
 import React from "react";
 import { useState } from "react";
+
 const ContactForm = () => {
-  const [Topic, setTopic] = useState("");
-  const [Name, setName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Phone, setPhone] = useState("");
-  const [Message, setMessage] = useState("");
+  const [topic, setTopic] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = {
-      Topic,
-      Name,
-      Email,
-      Phone,
-      Message,
+      topic,
+      name,
+      email,
+      phone,
+      message,
     };
 
     try {
       const response = await fetch(
-       
-       // "https://backend-contact-2.onrender.com/api/contact",
-     //   "http://localhost:5000/api/contact",
-     "https://contact-us-backend-1.onrender.com/api/contact",
+        "https://contact-us-backend-1.onrender.com/api/contact",
         {
           method: "POST",
           headers: {
@@ -49,7 +47,7 @@ const ContactForm = () => {
 
   return (
     <div className="flex flex-col lg:flex-row justify-between items-center h-screen px-8">
-      {/* Left: Image with link to Google Map (Shifted to the right) */}
+      {/* Left: Image with link to Google Map */}
       <div className="w-full lg:w-[50%] h-[90%] pl-4 mb-8 lg:mb-0">
         <a
           href="https://www.google.com/maps/place/To-Let+Globe/@26.8465566,80.9797793,15z/data=!4m6!3m5!1s0x399bfd77577ba78f:0xd2d6f22d1b246815!8m2!3d26.8465566!4d80.9797793!16s%2Fg%2F11vhrqqb45?entry=ttu"
@@ -79,7 +77,7 @@ const ContactForm = () => {
         <div className="mb-4">
           <select
             name="topic"
-            value={Topic}
+            value={topic}
             onChange={(e) => setTopic(e.target.value)}
             className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-black text-white py-2"
           >
@@ -95,53 +93,10 @@ const ContactForm = () => {
           <input
             type="text"
             name="name"
-            value={Name}
+            value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-transparent text-white py-2"
             placeholder="Name"
           />
         </div>
-        <div className="mb-4">
-          <input
-            type="email"
-            value={Email}
-            onChange={(e) => setEmail(e.target.value)}
-            name="email"
-            className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-transparent text-white py-2"
-            placeholder="Email"
-          />
-        </div>
-        <div className="mb-4">
-          <input
-            type="tel"
-            name="phone"
-            value={Phone}
-            onChange={(e) => setPhone(e.target.value)}
-            className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-transparent text-white py-2"
-            placeholder="Phone"
-          />
-        </div>
-        <div className="mb-6">
-          <textarea
-            value={Message}
-            onChange={(e) => setMessage(e.target.value)}
-            name="message"
-            rows="3"
-            className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-transparent text-white py-2"
-            placeholder="Message"
-          ></textarea>
-        </div>
-        <div className="text-left">
-          <button
-            type="submit"
-            className="bg-black text-yellow-400 py-2 px-4 rounded-lg hover:text-yellow-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-          >
-            Send Message
-          </button>
-        </div>
-      </form>
-    </div>
-  );
-};
-
-export default ContactForm;
+        <div classNa
