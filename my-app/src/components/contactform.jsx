@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const ContactForm = () => {
   const [topic, setTopic] = useState("");
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
@@ -12,7 +12,7 @@ const ContactForm = () => {
     e.preventDefault();
     const formData = {
       topic,
-      name,
+      username,
       email,
       phone,
       message,
@@ -33,7 +33,7 @@ const ContactForm = () => {
         const data = await response.json();
         console.log("done", data);
         setTopic("");
-        setName("");
+        setUsername("");
         setEmail("");
         setPhone("");
         setMessage("");
@@ -90,11 +90,11 @@ const ContactForm = () => {
         <div className="mb-4">
           <input
             type="text"
-            name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             className="w-full border-b border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-transparent text-white py-2"
-            placeholder="Name"
+            placeholder="Username"
           />
         </div>
         <div className="mb-4">
@@ -141,4 +141,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
 
