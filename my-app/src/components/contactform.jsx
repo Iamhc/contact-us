@@ -48,7 +48,7 @@ const ContactForm = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-between items-center h-screen px-8">
       {/* Left: Image with link to Google Map */}
-      <div className="w-full lg:w-[50%] h-[90%] pl-4 mb-8 lg:mb-0">
+      <div className="w-full lg:w-[50%] h-[90%] pl-4 mb-8 lg:mb-0 order-last lg:order-first">
         <a
           href="https://www.google.com/maps/place/To-Let+Globe/@26.8465566,80.9797793,15z/data=!4m6!3m5!1s0x399bfd77577ba78f:0xd2d6f22d1b246815!8m2!3d26.8465566!4d80.9797793!16s%2Fg%2F11vhrqqb45?entry=ttu"
           target="_blank"
