@@ -57,7 +57,7 @@ const ContactForm = () => {
           <img
             src={require("../resources/t.png")}
             alt="Location Map"
-            className="w-full h-[300px] lg:h-full object-contain"
+            className="w-full h-[110%] lg:h-full object-contain"
           />
         </a>
       </div>
